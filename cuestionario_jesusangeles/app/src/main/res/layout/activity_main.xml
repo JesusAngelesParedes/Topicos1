@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- EditText para el nombre -->
+        <EditText
+            android:id="@+id/editTextNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- TextView para el género de película -->
+        <TextView
+            android:id="@+id/textViewPeliculaGenero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Género de película"
+            android:layout_below="@id/editTextNombre"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Spinner para el género de película -->
+        <Spinner
+            android:id="@+id/spinnerPeliculaGenero"
+            android:layout_width="381dp"
+            android:layout_height="65dp"
+            android:layout_below="@id/textViewPeliculaGenero"
+            android:layout_marginTop="-8dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- TextView para el género de música -->
+        <TextView
+            android:id="@+id/textViewMusicaGenero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Género de música"
+            android:layout_below="@id/spinnerPeliculaGenero"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Spinner para el género de música -->
+        <Spinner
+            android:id="@+id/spinnerMusicaGenero"
+            android:layout_width="382dp"
+            android:layout_height="51dp"
+            android:layout_below="@id/textViewMusicaGenero"
+            android:layout_marginTop="-11dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- TextView para el nivel de inglés -->
+        <TextView
+            android:id="@+id/textViewNivelIngles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nivel de inglés"
+            android:layout_below="@id/spinnerMusicaGenero"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Spinner para el nivel de inglés -->
+
+        <!-- EditText para el correo -->
+        <Spinner
+            android:id="@+id/spinnerNivelIngles"
+            android:layout_width="382dp"
+            android:layout_height="52dp"
+            android:layout_below="@id/textViewNivelIngles"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="16dp" />
+
+        <EditText
+            android:id="@+id/editTextCorreo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Correo electrónico"
+            android:inputType="textEmailAddress"
+            android:layout_below="@id/spinnerNivelIngles"
+            android:layout_marginBottom="16dp" />
+
+        <!-- RadioGroup para el sexo -->
+        <RadioGroup
+            android:id="@+id/radioGroupSexo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/editTextCorreo"
+            android:layout_marginBottom="16dp">
+
+            <!-- RadioButton para masculino -->
+            <RadioButton
+                android:id="@+id/radioButtonMasculino"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Masculino"/>
+
+            <!-- RadioButton para femenino -->
+            <RadioButton
+                android:id="@+id/radioButtonFemenino"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Femenino"/>
+        </RadioGroup>
+
+
+
+        <!-- CheckBox -->
+        <DatePicker
+            android:id="@+id/datePicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/radioGroupSexo"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp" />
+
+        <CheckBox
+            android:id="@+id/checkBoxCasado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¿Califique esta encuesta?"
+            android:layout_below="@id/datePicker"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- RatingBar -->
+        <RatingBar
+            android:id="@+id/ratingBarEncuesta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:rating="0"
+            android:layout_below="@id/checkBoxCasado"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Switch para el nivel de satisfaccion  -->
+        <Switch
+            android:id="@+id/switchNewsletter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¿Nivel de satisfaccion en la encuesta?"
+            android:layout_below="@id/ratingBarEncuesta"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- SeekBar  -->
+        <SeekBar
+            android:id="@+id/seekBarEdad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:layout_below="@id/switchNewsletter"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- EditText para la universidad -->
+        <EditText
+            android:id="@+id/editTextUniversidad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Universidad"
+            android:layout_below="@id/seekBarEdad"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- EditText para la carrera -->
+        <EditText
+            android:id="@+id/editTextCarrera"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Carrera"
+            android:layout_below="@id/editTextUniversidad"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- EditText para el semestre -->
+        <EditText
+            android:id="@+id/editTextSemestre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Semestre"
+            android:inputType="number"
+            android:layout_below="@id/editTextCarrera"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- EditText para el año de ingreso -->
+        <EditText
+            android:id="@+id/editTextAnioIngreso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Año de ingreso"
+            android:inputType="number"
+            android:layout_below="@id/editTextSemestre"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Nuevo campo - EditText para el promedio -->
+        <EditText
+            android:id="@+id/editTextPromedio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Promedio"
+            android:inputType="numberDecimal"
+            android:layout_below="@id/editTextAnioIngreso"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Nuevo campo - EditText para el hobby -->
+        <EditText
+            android:id="@+id/editTextHobby"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Hobby favorito"
+            android:layout_below="@id/editTextPromedio"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Botón para guardar -->
+        <Button
+            android:id="@+id/buttonGuardar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Guardar"
+            android:layout_below="@id/editTextHobby"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- TextView para el mensaje de agradecimiento -->
+        <TextView
+            android:id="@+id/textViewAgradecimiento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gracias por completar la encuesta"
+            android:layout_below="@id/buttonGuardar"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Botón para cerrar -->
+        <Button
+            android:id="@+id/buttonCerrar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cerrar"
+            android:layout_below="@id/textViewAgradecimiento"/>
+
+    </RelativeLayout>
+</ScrollView>
+
+
+
+
+
+
+
